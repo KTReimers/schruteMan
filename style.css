@@ -1,0 +1,81 @@
+*{
+    margin:0px;
+    padding:0px;
+    /* background-color: black; */
+}
+.container{
+    /* display:flex; */
+    /* font-size:6px; */
+    background-color: black;
+}
+#world{
+    position:relative;
+}
+.row{
+    font-size:0px;
+}
+
+.battlestar{
+    display:inline-flex;
+    width:50px;
+    height:50px;
+    background-image: url("img/BattlestarGalactica.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.beets{
+    display:inline-flex;
+    /* flex-direction:column; */
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    height:50px;
+    position:relative;
+    /* background-image:url("img/beets.png"); */
+    background-color: #533925;
+    border-radius: 5px 3px 5px 2px;
+    /* background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* animation: shake 5s;
+    animation-iteration-count: infinite; */
+}
+
+#schrute{
+    background-image:url("./img/dwight_schrute_pacman.png");
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+    left:50px;
+    top:50px;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+.empty{
+    background-color: #533925d7;
+    border-radius: 5px 3px 5px 2px;
+    width:50px;
+    height:50px;
+    display:inline-flex;
+}
+
+.beetImg{
+    width: 50px;
+    position:absolute;
+    animation: shake 3s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
