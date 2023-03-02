@@ -111,6 +111,12 @@ button{
     height:20px;
 }
 
+#music{
+    position:fixed;
+    top:94%;
+    left:0%;
+}
+
 
 @keyframes shake {
     0% { transform: translate(0, 0) rotate(0deg); }
