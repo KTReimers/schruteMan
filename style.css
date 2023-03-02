@@ -6,13 +6,13 @@
 body{
     background:black;
 }
-.container{
+/* .container{ */
     /* display:flex; */
     /* font-size:6px; */
     /* background-color: black; */
     /* position:relative; */
     /* width:100%; */
-}
+/* } */
 #world{
     position:relative;
     min-width: 1000px;
@@ -97,7 +97,14 @@ body{
     position:fixed;
     top:50%;
     left:50%;
+    transform: translate(-50%, -50%);
     display:none;
+}
+.win{
+    color:green;
+}
+.lose{
+    color:red;
 }
 
 button{

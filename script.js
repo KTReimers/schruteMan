@@ -100,6 +100,20 @@ document.onkeydown = function(e){
 
     schruteMan()
 }
+
+// var officeMusic = new Audio("")
+
+// var music = new Video({
+//     loop:true,
+//     volume:0.5,
+//     src:"https://www.youtube.com/embed/uyIVAm9PVrI?autoplay=1"
+// })
+
+// function setVolume(){
+//     music.volume=0.2
+// }
+// music.setVolume(0.2)
+
 // arrow up = keycode 38
 // key down = keycode 40
 // arrow right = keycode 39
