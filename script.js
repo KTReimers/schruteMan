@@ -1,20 +1,45 @@
-var world=[
-    [2,2,2,2,2,2,2,2,2,2],
-    [2,0,1,1,2,1,1,1,1,2],
-    [2,1,1,1,2,1,2,1,1,2],
-    [2,1,1,1,2,2,2,1,1,2],
-    [2,1,1,1,1,1,1,1,1,2],
-    [2,1,1,1,1,1,1,1,1,2],
-    [2,1,1,1,1,1,1,1,1,2],
-    [2,1,1,1,1,1,1,1,1,2],
-    [2,1,1,1,1,1,1,1,1,2],
-    [2,2,2,2,2,2,2,2,2,2]
-]
+// var world=[
+//     [2,2,2,2,2,2,2,2,2,2],
+//     [2,0,1,1,2,1,1,1,1,2],
+//     [2,1,1,1,2,1,2,1,1,2],
+//     [2,1,1,1,2,2,2,1,1,2],
+//     [2,1,1,1,1,1,1,1,1,2],
+//     [2,1,1,1,1,1,1,1,1,2],
+//     [2,1,1,1,1,1,1,1,1,2],
+//     [2,1,1,1,1,1,1,1,1,2],
+//     [2,1,1,1,1,1,1,1,1,2],
+//     [2,2,2,2,2,2,2,2,2,2]
+// ]
+var world=[]
+
+for(var i =0; i < 20; i++){
+    world[i]= []
+    for(var j= 0; j<20; j++){
+        if(i == 0){
+            world[i]=[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+        }else if(i ==19){
+            world[i]=[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+        }else if(i==1 && j == 1){
+            world[i][j]=0
+        }else{
+            if(j==0){
+                world[i][j]= 2
+            }else if(j==19){
+                world[i][j]= 2
+            }else{
+                var test = Math.floor(Math.random()*3)
+                world[i][j] = test
+                console.log(test)
+            }
+        }
+    }
+}
 
 var dwight = {
     x: 1,
     y: 1
 }
+var score = document.getElementById('score')
 
 function displayWorld(){
     var output = ""
@@ -31,7 +56,7 @@ function displayWorld(){
         }
         output+= '\n</div>'
     }
-    console.log(output)
+    // console.log(output)
     document.getElementById('world').innerHTML=output
 }
 displayWorld()
@@ -69,6 +94,7 @@ document.onkeydown = function(e){
     }
     if(world[dwight.x][dwight.y] == 1){
         world[dwight.x][dwight.y] = 0
+        score.innerText ++
         displayWorld()
     }
 

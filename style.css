@@ -3,13 +3,21 @@
     padding:0px;
     /* background-color: black; */
 }
+body{
+    background:black;
+}
 .container{
     /* display:flex; */
     /* font-size:6px; */
-    background-color: black;
+    /* background-color: black; */
+    /* position:relative; */
+    /* width:100%; */
 }
 #world{
     position:relative;
+    min-width: 1000px;
+    max-height: 1000px;
+    /* overflow:scroll; */
 }
 .row{
     font-size:0px;
@@ -69,6 +77,31 @@
     position:absolute;
     animation: shake 3s;
     animation-iteration-count: infinite;
+}
+
+#scoreBoard{
+    width:20%;
+    height:30px;
+    background:rgb(10, 19, 199);
+    position:fixed;
+    top:0;
+    left:78%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    color:#A3812F;
+}
+
+.win, .lose{
+    position:fixed;
+    top:50%;
+    left:50%;
+    display:none;
+}
+
+button{
+    height:20px;
 }
 
 

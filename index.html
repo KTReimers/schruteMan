@@ -11,6 +11,19 @@
 <body>
     <div class="container">
         <div id="world"></div>
+        <div id="scoreBoard">
+            <div>
+                <h2>Level: <span>1</span></h2>
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+            <button onclick="displayWorld(event)">New Game</button>
+        </div>
+        <div class="win">
+            <h2>You Win!</h2>
+        </div>
+        <div class="lose">
+            <h2>You lost! Loser</h2>
+        </div>
         <div id="schrute"></div>
     </div>
 </body>
