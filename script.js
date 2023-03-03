@@ -12,6 +12,7 @@
 // ]
 var world=[]
 
+
 for(var i =0; i < 20; i++){
     world[i]= []
     for(var j= 0; j<20; j++){
@@ -34,7 +35,6 @@ for(var i =0; i < 20; i++){
         }
     }
 }
-
 var dwight = {
     x: 1,
     y: 1
@@ -63,6 +63,10 @@ displayWorld()
 function schruteMan(){
     document.getElementById('schrute').style.top = dwight.x*50 +'px'
     document.getElementById('schrute').style.left = dwight.y*50 +'px'
+}
+
+function newGame(){
+    location.reload()
 }
 
 document.onkeydown = function(e){
